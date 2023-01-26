@@ -1,0 +1,106 @@
+// @use '@angular/material' as mat
+
+// @include mat-core()
+
+
+// // GAMA COLORES
+// $my-primary-color: (
+//   200 : #80a1ac,
+//   500 : #004358,
+//   700 : #003447,
+//   contrast: (
+//     200 : #000000,
+//     500 : #ffffff,
+//     700 : #ffffff,
+//   )
+// )
+
+// $my-accent-color: (
+//   200 : #8fc5b8,
+//   500 : #1f8a70,
+//   700 : #17775d,
+//   contrast: (
+//     200 : #000000,
+//     500 : #ffffff,
+//     700 : #ffffff,
+//   )
+// )
+
+// $my-warn-color: (
+//   200 : #feba80,
+//   500 : #fd7400,
+//   700 : #fc6100,
+//   contrast: (
+//     200 : #000000,
+//     500 : #000000,
+//     700 : #000000,
+//   )
+// )
+
+// // PALETA DE COLORES
+// $my-palette-primary: mat-palette($my-primary-color)
+// $my-palette-accent: mat-palette($my-accent-color)
+// $my-palette-warn: mat-palette($my-warn-color)
+
+// // TEMA PROPIO
+// $my-theme: mat-light-theme((
+//  color: (
+//    primary: $my-palette-primary,
+//    accent: $my-palette-accent,
+//    warn: $my-palette-warn
+//  )
+// ))
+
+// // APLICAR NUESTRO TEMA A ANGULAR
+// @include angular-material-theme($my-theme)
+
+
+// REEMPLAZA EN ANGULAR.JSON -> STYLES
+// "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+// POR LA RUTA DEL CUSTOM THEME
+// "src/assets/styles/my-theme.scss",
+
+@use '@angular/material' as mat
+
+@include mat.core()
+
+$modak-palette: (
+ 50: #c5cae9,
+ 100: #e4f0ee,
+ 200: #9fa8da,
+ 300: #7986cb,
+ 400: #7986cb,
+ 500: #7986cb,
+ 600: #7986cb,
+ 700: #7986cb,
+ 800: #7986cb,
+ 900: #006A61,
+ // ... continues to 900
+ contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: white,
+   400: rgba(black, 0.87),
+   500: rgba(black, 0.87),
+   600: rgba(black, 0.87),
+   700: rgba(black, 0.87),
+   800: rgba(black, 0.87),
+   900: rgba(black, 0.87),
+   // ... continues to 900
+ )
+)
+
+$my-primary: mat.define-palette(mat.$modak-palette)
+$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400)
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+))
+
+@include mat.all-component-themes($my-theme)

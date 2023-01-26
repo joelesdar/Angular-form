@@ -1,0 +1,48 @@
+.form__stepper {
+  padding-top: 32px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form__subtitle {
+  font-size: 22px;
+  line-height: 28px;
+  padding-top: 32px;
+  padding-bottom: 16px;
+}
+
+.form__form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px auto;
+  width: 100%;
+}
+
+.form__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #006A61;
+  color: #fff;
+  border-radius: 24px;
+  border: none;
+  padding: 10px 0px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.form__input {
+  padding: 10px 0;
+  line-height: 24px;
+  color: #3F4947;
+}
+
+.form__input-hint {
+  font-size: 12px;
+  line-height: 16px;
+  color: #3F4947;
+}

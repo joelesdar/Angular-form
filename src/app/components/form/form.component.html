@@ -1,0 +1,37 @@
+<mat-horizontal-stepper linear>
+  <mat-step class="form__stepper" label="Personal information" completed="false" color="primary">
+    <p class="form__subtitle">Please provide us with your personal information to send you the item</p>
+    <mat-form-field appearance="outline" class="form__form-field">
+      <input matInput placeholder="Date of Birth" class="form__input">
+      <mat-hint class="form__input-hint">MM/DD/YYYY</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form__form-field">
+      <mat-select placeholder="Gender" class="form__input">
+        <mat-option value="female">Female</mat-option>
+        <mat-option value="male">Male</mat-option>
+        <mat-option value="other">Other</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form__form-field">
+      <input matInput placeholder="ID Number" class="form__input">
+    </mat-form-field>
+    <div>
+      <button mat-button matStepperNext class="form__button">Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="Address">
+    <form>
+      <!-- <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label> -->
+        <input matInput placeholder="Address" required>
+        <!-- </mat-form-field> -->
+        <div>
+        <button mat-button matStepperNext class="form__button">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step label="Payment">
+    <p>You are now done.</p>
+  </mat-step>
+</mat-horizontal-stepper>
+
