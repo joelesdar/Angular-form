@@ -1,0 +1,45 @@
+.stepper {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.stepper__step {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.stepper__step:not(:last-child):after {
+  content: "";
+  position: relative;
+  height: 1px;
+  background-color: #BEC9C6;
+  flex: 1;
+  margin: auto;
+  margin: auto 8px;
+  width: 180px;
+}
+
+.stepper__number {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background: #DCEBE9;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.stepper__text {
+  margin: auto;
+}
+
+.stepper__number-active {
+  background: #006A61;
+  color: #fff;
+}

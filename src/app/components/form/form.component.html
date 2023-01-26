@@ -1,8 +1,9 @@
 <mat-horizontal-stepper linear>
-  <mat-step class="form__stepper" label="Personal information" completed="false" color="primary">
+  <!-- Material stepper -->
+  <mat-step class="form__stepper" label="Personal information" color="primary">
     <p class="form__subtitle">Please provide us with your personal information to send you the item</p>
     <mat-form-field appearance="outline" class="form__form-field">
-      <input matInput placeholder="Date of Birth" class="form__input">
+      <input matInput placeholder="Date of Birth" type="date" class="form__input">
       <mat-hint class="form__input-hint">MM/DD/YYYY</mat-hint>
     </mat-form-field>
     <mat-form-field appearance="outline" class="form__form-field">
@@ -13,19 +14,21 @@
       </mat-select>
     </mat-form-field>
     <mat-form-field appearance="outline" class="form__form-field">
-      <input matInput placeholder="ID Number" class="form__input">
+      <input matInput placeholder="ID Number" type="number" class="form__input">
     </mat-form-field>
     <div>
       <button mat-button matStepperNext class="form__button">Next</button>
     </div>
   </mat-step>
   <mat-step label="Address">
+    <!-- Personal stepper -->
+    <p class="form__subtitle">Extra content</p>
+    <app-stepper />
     <form>
-      <!-- <mat-form-field appearance="fill">
-        <mat-label>Address</mat-label> -->
-        <input matInput placeholder="Address" required>
-        <!-- </mat-form-field> -->
-        <div>
+      <mat-form-field appearance="outline" class="form__form-field">
+        <input matInput placeholder="Address" type="text" class="form__input">
+      </mat-form-field>
+      <div>
         <button mat-button matStepperNext class="form__button">Next</button>
       </div>
     </form>
@@ -34,4 +37,3 @@
     <p>You are now done.</p>
   </mat-step>
 </mat-horizontal-stepper>
-

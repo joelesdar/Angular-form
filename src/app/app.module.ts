@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatSelectModule} from '@angular/material/select';
+import { StepperComponent } from './stepper/stepper.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import {MatSelectModule} from '@angular/material/select';
     AppComponent,
     LogoComponent,
     FormComponent,
+    StepperComponent,
   ],
   imports: [
     MatStepperModule,
